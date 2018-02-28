@@ -29,8 +29,43 @@ class Duck_Duck_GoUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        testItemSelection()
+        
+    }
+    
+    func testItemSelection() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Cosmo Kramer"]/*[[".cells.staticTexts[\"Cosmo Kramer\"]",".staticTexts[\"Cosmo Kramer\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Cosmo Kramer"].buttons["Seinfeld"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Jackie Chiles"]/*[[".cells.staticTexts[\"Jackie Chiles\"]",".staticTexts[\"Jackie Chiles\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Jackie Chiles"].buttons["Seinfeld"].tap()
+        
+        XCTAssert(true, "simple item selection works fine for initial launch")
+
+        testSwitchView()
+
+    }
+    
+    func testSwitchView() {
+        
+        
+        let app = XCUIApplication()
+        let gridswitchButton = app.navigationBars["Seinfeld"].buttons["gridswitch"]
+        gridswitchButton.tap()
+        gridswitchButton.tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Jerry Seinfeld (character)"]/*[[".cells.staticTexts[\"Jerry Seinfeld (character)\"]",".staticTexts[\"Jerry Seinfeld (character)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        gridswitchButton.tap()
+        
+        let element = app.collectionViews.children(matching: .cell).element(boundBy: 1).children(matching: .other).element
+        element.swipeUp()
+        element.swipeDown()
+        gridswitchButton.tap()
+        
+        XCTAssert(true, "switching list view and grid view works fine")
+        
     }
     
 }
