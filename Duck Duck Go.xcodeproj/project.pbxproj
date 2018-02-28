@@ -18,6 +18,11 @@
 		EFD449FA20470EEF006C1E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */; };
 		EFD44A0520470EEF006C1E30 /* Duck_Duck_GoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A0420470EEF006C1E30 /* Duck_Duck_GoTests.swift */; };
 		EFD44A1020470EEF006C1E30 /* Duck_Duck_GoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A0F20470EEF006C1E30 /* Duck_Duck_GoUITests.swift */; };
+		EFD44A1E204710E3006C1E30 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A1D204710E3006C1E30 /* ServiceManager.swift */; };
+		EFD44A2020471197006C1E30 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A1F20471197006C1E30 /* Utility.swift */; };
+		EFD44A2220471245006C1E30 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD44A2120471245006C1E30 /* Environment.plist */; };
+		EFD44A2420471350006C1E30 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A2320471350006C1E30 /* SearchResultModel.swift */; };
+		EFD44A2E20471683006C1E30 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A2C20471683006C1E30 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,13 @@
 		EFD44A0B20470EEF006C1E30 /* Duck Duck GoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duck Duck GoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD44A0F20470EEF006C1E30 /* Duck_Duck_GoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck_Duck_GoUITests.swift; sourceTree = "<group>"; };
 		EFD44A1120470EEF006C1E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD44A1D204710E3006C1E30 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		EFD44A1F20471197006C1E30 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EFD44A2120471245006C1E30 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		EFD44A2320471350006C1E30 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		EFD44A2C20471683006C1E30 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Duck Duck Go/Reachability/Reachability.m"; sourceTree = SOURCE_ROOT; };
+		EFD44A2D20471683006C1E30 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Duck Duck Go/Reachability/Reachability.h"; sourceTree = SOURCE_ROOT; };
+		EFD44A2F204716D9006C1E30 /* Duck Duck Go-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Duck Duck Go-Bridging-Header.h"; path = "Duck Duck Go/Duck Duck Go-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,8 @@
 		EFD449EC20470EEF006C1E30 /* Duck Duck Go */ = {
 			isa = PBXGroup;
 			children = (
+				EFD44A25204715C5006C1E30 /* Lib */,
+				EFD44A2F204716D9006C1E30 /* Duck Duck Go-Bridging-Header.h */,
 				EFD449ED20470EEF006C1E30 /* AppDelegate.swift */,
 				EFD449EF20470EEF006C1E30 /* MasterViewController.swift */,
 				EFD449F120470EEF006C1E30 /* DetailViewController.swift */,
@@ -146,6 +160,10 @@
 				EFD449F620470EEF006C1E30 /* Assets.xcassets */,
 				EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */,
 				EFD449FB20470EEF006C1E30 /* Info.plist */,
+				EFD44A1D204710E3006C1E30 /* ServiceManager.swift */,
+				EFD44A1F20471197006C1E30 /* Utility.swift */,
+				EFD44A2120471245006C1E30 /* Environment.plist */,
+				EFD44A2320471350006C1E30 /* SearchResultModel.swift */,
 			);
 			path = "Duck Duck Go";
 			sourceTree = "<group>";
@@ -166,6 +184,24 @@
 				EFD44A1120470EEF006C1E30 /* Info.plist */,
 			);
 			path = "Duck Duck GoUITests";
+			sourceTree = "<group>";
+		};
+		EFD44A25204715C5006C1E30 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				EFD44A2B20471678006C1E30 /* Reachability */,
+			);
+			name = Lib;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		EFD44A2B20471678006C1E30 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				EFD44A2D20471683006C1E30 /* Reachability.h */,
+				EFD44A2C20471683006C1E30 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +281,7 @@
 				TargetAttributes = {
 					EFD449E920470EEF006C1E30 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EFD449FF20470EEF006C1E30 = {
@@ -284,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD44A2220471245006C1E30 /* Environment.plist in Resources */,
 				EFD449FA20470EEF006C1E30 /* LaunchScreen.storyboard in Resources */,
 				EFD449F720470EEF006C1E30 /* Assets.xcassets in Resources */,
 				EFD449F520470EEF006C1E30 /* Main.storyboard in Resources */,
@@ -442,9 +480,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck Go/Pods-Duck Duck Go-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,6 +499,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD44A2020471197006C1E30 /* Utility.swift in Sources */,
+				EFD44A1E204710E3006C1E30 /* ServiceManager.swift in Sources */,
+				EFD44A2420471350006C1E30 /* SearchResultModel.swift in Sources */,
+				EFD44A2E20471683006C1E30 /* Reachability.m in Sources */,
 				EFD449F220470EEF006C1E30 /* DetailViewController.swift in Sources */,
 				EFD449F020470EEF006C1E30 /* MasterViewController.swift in Sources */,
 				EFD449EE20470EEF006C1E30 /* AppDelegate.swift in Sources */,
@@ -627,12 +672,15 @@
 			baseConfigurationReference = 47DCAAD3DFDFFA90C2A4B2DA /* Pods-Duck Duck Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HX7S377P6E;
 				INFOPLIST_FILE = "Duck Duck Go/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Duck Duck Go/Duck Duck Go-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -643,12 +691,14 @@
 			baseConfigurationReference = B256FF0932289F3B6BF907BE /* Pods-Duck Duck Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HX7S377P6E;
 				INFOPLIST_FILE = "Duck Duck Go/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Duck Duck Go/Duck Duck Go-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

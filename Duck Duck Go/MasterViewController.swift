@@ -13,7 +13,10 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
 
+    var results = [SearchResultModel]()
 
+    @IBOutlet var masterTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,8 +33,92 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        
+        reloadViewWithSearchResult()
+    }
+    
+    func reloadViewWithSearchResult() {
+        
+        if !Reachability.forInternetConnection().isReachable() {
+            
+            let alert = UIAlertController(title: "", message: "Please connect to internet", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let alertActionOK = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(alertActionOK)
+            
+            DispatchQueue.main.async {
+                
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+                
+            }
+            
+        }
+
+        let searchText = "seinfeld+characters"
+        
+        ServiceManager.sharedInstance.getResultsFor(searchText: searchText, completion: { error,response in
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            func onSuccess(response: [SearchResultModel]) {
+                
+                self.results = response
+                
+                DispatchQueue.main.async {
+                    
+                    self.refreshData()
+                    
+                }
+            }
+            
+            func onFailure(error: Error) {
+                
+                self.results = [SearchResultModel]()
+                
+                let alert = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                
+                let alertActionOK = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alert.addAction(alertActionOK)
+                
+                DispatchQueue.main.async {
+                    
+                    self.refreshData()
+                    
+                    //Comment : alert the user when something fails
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
+            
+            if let err = error {
+                
+                onFailure(error: err)
+                
+            }
+            else {
+                
+                guard let respData = response else {
+                    
+                    onFailure(error: NSError(domain:"", code:-1, userInfo:["localizedDescription":"Something went wrong"]))
+                    
+                    return
+                }
+                
+                onSuccess(response: respData)
+            }
+            
+        })
+        
     }
 
+    func refreshData() {
+        masterTableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,14 +152,20 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return results.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+//        let object = objects[indexPath.row] as! NSDate
+        
+        let object = results[indexPath.row]
+        
+        if let titlelbl = object.title {
+            cell.textLabel!.text = titlelbl
+        }
+        
         return cell
     }
 
