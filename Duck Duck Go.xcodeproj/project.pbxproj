@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFD449EE20470EEF006C1E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449ED20470EEF006C1E30 /* AppDelegate.swift */; };
+		EFD449F020470EEF006C1E30 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449EF20470EEF006C1E30 /* MasterViewController.swift */; };
+		EFD449F220470EEF006C1E30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449F120470EEF006C1E30 /* DetailViewController.swift */; };
+		EFD449F520470EEF006C1E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD449F320470EEF006C1E30 /* Main.storyboard */; };
+		EFD449F720470EEF006C1E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD449F620470EEF006C1E30 /* Assets.xcassets */; };
+		EFD449FA20470EEF006C1E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */; };
+		EFD44A0520470EEF006C1E30 /* Duck_Duck_GoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A0420470EEF006C1E30 /* Duck_Duck_GoTests.swift */; };
+		EFD44A1020470EEF006C1E30 /* Duck_Duck_GoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A0F20470EEF006C1E30 /* Duck_Duck_GoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFD44A0120470EEF006C1E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFD449E220470EEF006C1E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD449E920470EEF006C1E30;
+			remoteInfo = "Duck Duck Go";
+		};
+		EFD44A0C20470EEF006C1E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFD449E220470EEF006C1E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD449E920470EEF006C1E30;
+			remoteInfo = "Duck Duck Go";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFD449EA20470EEF006C1E30 /* Duck Duck Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duck Duck Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD449ED20470EEF006C1E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFD449EF20470EEF006C1E30 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		EFD449F120470EEF006C1E30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EFD449F420470EEF006C1E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFD449F620470EEF006C1E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFD449F920470EEF006C1E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFD449FB20470EEF006C1E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD44A0020470EEF006C1E30 /* Duck Duck GoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duck Duck GoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD44A0420470EEF006C1E30 /* Duck_Duck_GoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck_Duck_GoTests.swift; sourceTree = "<group>"; };
+		EFD44A0620470EEF006C1E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD44A0B20470EEF006C1E30 /* Duck Duck GoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duck Duck GoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD44A0F20470EEF006C1E30 /* Duck_Duck_GoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck_Duck_GoUITests.swift; sourceTree = "<group>"; };
+		EFD44A1120470EEF006C1E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFD449E720470EEF006C1E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD449FD20470EEF006C1E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD44A0820470EEF006C1E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFD449E120470EEF006C1E30 = {
+			isa = PBXGroup;
+			children = (
+				EFD449EC20470EEF006C1E30 /* Duck Duck Go */,
+				EFD44A0320470EEF006C1E30 /* Duck Duck GoTests */,
+				EFD44A0E20470EEF006C1E30 /* Duck Duck GoUITests */,
+				EFD449EB20470EEF006C1E30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFD449EB20470EEF006C1E30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFD449EA20470EEF006C1E30 /* Duck Duck Go.app */,
+				EFD44A0020470EEF006C1E30 /* Duck Duck GoTests.xctest */,
+				EFD44A0B20470EEF006C1E30 /* Duck Duck GoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFD449EC20470EEF006C1E30 /* Duck Duck Go */ = {
+			isa = PBXGroup;
+			children = (
+				EFD449ED20470EEF006C1E30 /* AppDelegate.swift */,
+				EFD449EF20470EEF006C1E30 /* MasterViewController.swift */,
+				EFD449F120470EEF006C1E30 /* DetailViewController.swift */,
+				EFD449F320470EEF006C1E30 /* Main.storyboard */,
+				EFD449F620470EEF006C1E30 /* Assets.xcassets */,
+				EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */,
+				EFD449FB20470EEF006C1E30 /* Info.plist */,
+			);
+			path = "Duck Duck Go";
+			sourceTree = "<group>";
+		};
+		EFD44A0320470EEF006C1E30 /* Duck Duck GoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD44A0420470EEF006C1E30 /* Duck_Duck_GoTests.swift */,
+				EFD44A0620470EEF006C1E30 /* Info.plist */,
+			);
+			path = "Duck Duck GoTests";
+			sourceTree = "<group>";
+		};
+		EFD44A0E20470EEF006C1E30 /* Duck Duck GoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD44A0F20470EEF006C1E30 /* Duck_Duck_GoUITests.swift */,
+				EFD44A1120470EEF006C1E30 /* Info.plist */,
+			);
+			path = "Duck Duck GoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFD449E920470EEF006C1E30 /* Duck Duck Go */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD44A1420470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck Go" */;
+			buildPhases = (
+				EFD449E620470EEF006C1E30 /* Sources */,
+				EFD449E720470EEF006C1E30 /* Frameworks */,
+				EFD449E820470EEF006C1E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Duck Duck Go";
+			productName = "Duck Duck Go";
+			productReference = EFD449EA20470EEF006C1E30 /* Duck Duck Go.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFD449FF20470EEF006C1E30 /* Duck Duck GoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD44A1720470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoTests" */;
+			buildPhases = (
+				EFD449FC20470EEF006C1E30 /* Sources */,
+				EFD449FD20470EEF006C1E30 /* Frameworks */,
+				EFD449FE20470EEF006C1E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD44A0220470EEF006C1E30 /* PBXTargetDependency */,
+			);
+			name = "Duck Duck GoTests";
+			productName = "Duck Duck GoTests";
+			productReference = EFD44A0020470EEF006C1E30 /* Duck Duck GoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFD44A0A20470EEF006C1E30 /* Duck Duck GoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD44A1A20470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoUITests" */;
+			buildPhases = (
+				EFD44A0720470EEF006C1E30 /* Sources */,
+				EFD44A0820470EEF006C1E30 /* Frameworks */,
+				EFD44A0920470EEF006C1E30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD44A0D20470EEF006C1E30 /* PBXTargetDependency */,
+			);
+			name = "Duck Duck GoUITests";
+			productName = "Duck Duck GoUITests";
+			productReference = EFD44A0B20470EEF006C1E30 /* Duck Duck GoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFD449E220470EEF006C1E30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ossum;
+				TargetAttributes = {
+					EFD449E920470EEF006C1E30 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EFD449FF20470EEF006C1E30 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFD449E920470EEF006C1E30;
+					};
+					EFD44A0A20470EEF006C1E30 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFD449E920470EEF006C1E30;
+					};
+				};
+			};
+			buildConfigurationList = EFD449E520470EEF006C1E30 /* Build configuration list for PBXProject "Duck Duck Go" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFD449E120470EEF006C1E30;
+			productRefGroup = EFD449EB20470EEF006C1E30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFD449E920470EEF006C1E30 /* Duck Duck Go */,
+				EFD449FF20470EEF006C1E30 /* Duck Duck GoTests */,
+				EFD44A0A20470EEF006C1E30 /* Duck Duck GoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFD449E820470EEF006C1E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD449FA20470EEF006C1E30 /* LaunchScreen.storyboard in Resources */,
+				EFD449F720470EEF006C1E30 /* Assets.xcassets in Resources */,
+				EFD449F520470EEF006C1E30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD449FE20470EEF006C1E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD44A0920470EEF006C1E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFD449E620470EEF006C1E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD449F220470EEF006C1E30 /* DetailViewController.swift in Sources */,
+				EFD449F020470EEF006C1E30 /* MasterViewController.swift in Sources */,
+				EFD449EE20470EEF006C1E30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD449FC20470EEF006C1E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD44A0520470EEF006C1E30 /* Duck_Duck_GoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD44A0720470EEF006C1E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD44A1020470EEF006C1E30 /* Duck_Duck_GoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFD44A0220470EEF006C1E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD449E920470EEF006C1E30 /* Duck Duck Go */;
+			targetProxy = EFD44A0120470EEF006C1E30 /* PBXContainerItemProxy */;
+		};
+		EFD44A0D20470EEF006C1E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD449E920470EEF006C1E30 /* Duck Duck Go */;
+			targetProxy = EFD44A0C20470EEF006C1E30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFD449F320470EEF006C1E30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD449F420470EEF006C1E30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD449F920470EEF006C1E30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFD44A1220470EEF006C1E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFD44A1320470EEF006C1E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFD44A1520470EEF006C1E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck Go/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-Go";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFD44A1620470EEF006C1E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck Go/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-Go";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFD44A1820470EEF006C1E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck GoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-GoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duck Duck Go.app/Duck Duck Go";
+			};
+			name = Debug;
+		};
+		EFD44A1920470EEF006C1E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck GoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-GoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duck Duck Go.app/Duck Duck Go";
+			};
+			name = Release;
+		};
+		EFD44A1B20470EEF006C1E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck GoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-GoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Duck Duck Go";
+			};
+			name = Debug;
+		};
+		EFD44A1C20470EEF006C1E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX7S377P6E;
+				INFOPLIST_FILE = "Duck Duck GoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ossum.Duck-Duck-GoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Duck Duck Go";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFD449E520470EEF006C1E30 /* Build configuration list for PBXProject "Duck Duck Go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD44A1220470EEF006C1E30 /* Debug */,
+				EFD44A1320470EEF006C1E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD44A1420470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck Go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD44A1520470EEF006C1E30 /* Debug */,
+				EFD44A1620470EEF006C1E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD44A1720470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD44A1820470EEF006C1E30 /* Debug */,
+				EFD44A1920470EEF006C1E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD44A1A20470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD44A1B20470EEF006C1E30 /* Debug */,
+				EFD44A1C20470EEF006C1E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFD449E220470EEF006C1E30 /* Project object */;
+}
