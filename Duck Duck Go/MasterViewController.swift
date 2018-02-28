@@ -17,6 +17,8 @@ class MasterViewController: UIViewController {
 
     @IBOutlet var masterTableView: UITableView!
     
+    @IBOutlet weak var masterCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,6 +38,10 @@ class MasterViewController: UIViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
             detailViewController?.title = ""
         }
+        
+        masterTableView.isHidden = false
+        masterCollectionView.isHidden = true
+        
         
         reloadViewWithSearchResult()
 
@@ -128,6 +134,7 @@ class MasterViewController: UIViewController {
 
     func refreshData() {
         masterTableView.reloadData()
+        masterCollectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -137,6 +144,15 @@ class MasterViewController: UIViewController {
 
     @objc
     func switchView(_ sender: Any) {
+        
+        if masterTableView.isHidden {
+            masterTableView.isHidden = false
+            masterCollectionView.isHidden = true
+        }
+        else {
+            masterTableView.isHidden = true
+            masterCollectionView.isHidden = false
+        }
         
     }
     
@@ -161,10 +177,27 @@ class MasterViewController: UIViewController {
                 }
             }
         }
+        else if segue.identifier == "showDetailFromCollection" {
+            if let indexPath = self.masterCollectionView.indexPathsForSelectedItems?.first {
+                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                
+                let result = results[indexPath.row]
+                
+                controller.resultItem = result
+                
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+                
+                if let resTitle = result.title {
+                    controller.title = resTitle
+                }
+            }
+        }
+
     }
 }
-    // MARK: - Table View
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
 
@@ -204,6 +237,31 @@ extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+}
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
+extension MasterViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCellIdentifier", for: indexPath) as! CollectionViewCell
+        
+        cell.imageView.image = UIImage(named:"placeholder")
+        
+        return cell
+    }
+    
+    
+    
+    
 }
 

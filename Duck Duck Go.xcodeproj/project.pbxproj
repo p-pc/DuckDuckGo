@@ -23,6 +23,7 @@
 		EFD44A2220471245006C1E30 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFD44A2120471245006C1E30 /* Environment.plist */; };
 		EFD44A2420471350006C1E30 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A2320471350006C1E30 /* SearchResultModel.swift */; };
 		EFD44A2E20471683006C1E30 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A2C20471683006C1E30 /* Reachability.m */; };
+		EFD44A32204741D0006C1E30 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD44A31204741D0006C1E30 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		EFD44A2C20471683006C1E30 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Duck Duck Go/Reachability/Reachability.m"; sourceTree = SOURCE_ROOT; };
 		EFD44A2D20471683006C1E30 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Duck Duck Go/Reachability/Reachability.h"; sourceTree = SOURCE_ROOT; };
 		EFD44A2F204716D9006C1E30 /* Duck Duck Go-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Duck Duck Go-Bridging-Header.h"; path = "Duck Duck Go/Duck Duck Go-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		EFD44A31204741D0006C1E30 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				EFD449ED20470EEF006C1E30 /* AppDelegate.swift */,
 				EFD449EF20470EEF006C1E30 /* MasterViewController.swift */,
 				EFD449F120470EEF006C1E30 /* DetailViewController.swift */,
+				EFD44A31204741D0006C1E30 /* CollectionViewCell.swift */,
 				EFD449F320470EEF006C1E30 /* Main.storyboard */,
 				EFD449F620470EEF006C1E30 /* Assets.xcassets */,
 				EFD449F820470EEF006C1E30 /* LaunchScreen.storyboard */,
@@ -501,6 +504,7 @@
 			files = (
 				EFD44A2020471197006C1E30 /* Utility.swift in Sources */,
 				EFD44A1E204710E3006C1E30 /* ServiceManager.swift in Sources */,
+				EFD44A32204741D0006C1E30 /* CollectionViewCell.swift in Sources */,
 				EFD44A2420471350006C1E30 /* SearchResultModel.swift in Sources */,
 				EFD44A2E20471683006C1E30 /* Reachability.m in Sources */,
 				EFD449F220470EEF006C1E30 /* DetailViewController.swift in Sources */,
