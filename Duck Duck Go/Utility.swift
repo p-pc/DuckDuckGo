@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class Utility: NSObject {
+
+    public var userMediaCache =  ImageCache(name: "UserMedia")
+
+    static let sharedInstance: Utility = {
+        
+        let instance = Utility()
+        
+        return instance
+        
+    }()
 
     class func parseResultsFrom(jsonDict : NSDictionary) -> [SearchResultModel] {
         

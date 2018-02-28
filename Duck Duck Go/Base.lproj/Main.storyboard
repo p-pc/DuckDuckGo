@@ -173,14 +173,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oen-3E-nMp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="0.0" width="360" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="oen-3E-nMp" firstAttribute="leading" secondItem="pLl-Nn-39s" secondAttribute="leading" id="0L8-4d-e1y"/>
+                                        <constraint firstItem="oen-3E-nMp" firstAttribute="leading" secondItem="pLl-Nn-39s" secondAttribute="leading" constant="15" id="0L8-4d-e1y"/>
                                         <constraint firstItem="oen-3E-nMp" firstAttribute="top" secondItem="pLl-Nn-39s" secondAttribute="top" id="DHb-BY-ALV"/>
                                         <constraint firstAttribute="trailing" secondItem="oen-3E-nMp" secondAttribute="trailing" id="HtI-eD-l7i"/>
                                         <constraint firstAttribute="bottom" secondItem="oen-3E-nMp" secondAttribute="bottom" id="kmc-yZ-aT3"/>

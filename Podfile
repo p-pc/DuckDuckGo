@@ -8,6 +8,7 @@ target 'Duck Duck Go' do
 platform :ios, '11.0'
 
 pod 'Alamofire' , '4.5.1'
+pod 'Kingfisher', '4.1.1'
 
   # Pods for Duck Duck Go
 
