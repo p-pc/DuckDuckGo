@@ -13,3 +13,9 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
 }
+
+class ReusableHeaderView : UICollectionReusableView {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+}

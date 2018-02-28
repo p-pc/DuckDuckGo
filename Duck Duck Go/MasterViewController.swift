@@ -223,9 +223,13 @@ extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Seinfeld"
+    }
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -251,6 +255,7 @@ extension MasterViewController : UICollectionViewDataSource, UICollectionViewDel
         return results.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCellIdentifier", for: indexPath) as! CollectionViewCell
@@ -260,8 +265,22 @@ extension MasterViewController : UICollectionViewDataSource, UICollectionViewDel
         return cell
     }
     
-    
-    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "collectionHeaderView", for: indexPath) as! ReusableHeaderView
+
+            headerView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.25)
+            
+            headerView.titleLabel.text = "Seinfeld"
+            
+            return headerView
+            
+        default:
+                assert(false, "Unexpected element kind")
+
+        }
+    }
     
 }
 
