@@ -14,12 +14,19 @@ class MasterViewController: UIViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
 
-    var results = [SearchResultModel]()
+    var results = [SearchResultModel]() {
+        didSet {
+            searchResults = results
+        }
+    }
+
+    var searchResults = [SearchResultModel]()
 
     @IBOutlet var masterTableView: UITableView!
     
     @IBOutlet weak var masterCollectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -166,7 +173,7 @@ class MasterViewController: UIViewController {
             if let indexPath = self.masterTableView.indexPathForSelectedRow {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 
-                let result = results[indexPath.row]
+                let result = searchResults[indexPath.row]
 
                 controller.resultItem = result
                 
@@ -182,7 +189,7 @@ class MasterViewController: UIViewController {
             if let indexPath = self.masterCollectionView.indexPathsForSelectedItems?.first {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 
-                let result = results[indexPath.row]
+                let result = searchResults[indexPath.row]
                 
                 controller.resultItem = result
                 
@@ -198,6 +205,34 @@ class MasterViewController: UIViewController {
     }
 }
 
+// MARK: - UISearchBarDelegate
+
+extension MasterViewController : UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == "" {
+            searchResults = results
+            refreshData()
+            return
+        }
+        
+        let searchResultsFiltered = results.filter({($0.text?.localizedCaseInsensitiveContains(searchText))!})
+
+        searchResults = searchResultsFiltered
+        
+        refreshData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
+
+    
+}
+
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
@@ -207,7 +242,7 @@ extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return searchResults.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -215,7 +250,7 @@ extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
 
 //        let object = objects[indexPath.row] as! NSDate
         
-        let object = results[indexPath.row]
+        let object = searchResults[indexPath.row]
         
         if let titlelbl = object.title {
             cell.textLabel!.text = titlelbl
@@ -253,7 +288,7 @@ extension MasterViewController : UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return results.count
+        return searchResults.count
     }
     
     
@@ -263,7 +298,7 @@ extension MasterViewController : UICollectionViewDataSource, UICollectionViewDel
         
         cell.imageView.image = UIImage(named:"placeholder")
         
-        let resultItem = results[indexPath.row]
+        let resultItem = searchResults[indexPath.row]
         
         if let imageURL = resultItem.iconURL {
             

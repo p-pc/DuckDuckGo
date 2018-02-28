@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6PC-Xc-fJH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kpu-cO-6Bo">
                                     <size key="itemSize" width="250" height="250"/>
@@ -195,7 +195,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93E-0a-jfg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellIdentifier" textLabel="nY0-NQ-eH4" style="IBUITableViewCellStyleDefault" id="FAs-A0-tXn">
@@ -224,15 +224,28 @@
                                     <outlet property="delegate" destination="Yx0-wc-EKa" id="Dkc-66-Ixi"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-vf-FNz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eaw-dT-0zs"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Yx0-wc-EKa" id="oAF-vS-lms"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="93E-0a-jfg" firstAttribute="trailing" secondItem="vS6-44-iTf" secondAttribute="trailing" id="21F-SA-Lhw"/>
+                            <constraint firstItem="q0b-vf-FNz" firstAttribute="top" secondItem="vS6-44-iTf" secondAttribute="top" id="EsE-tP-wCM"/>
                             <constraint firstItem="93E-0a-jfg" firstAttribute="bottom" secondItem="vS6-44-iTf" secondAttribute="bottom" id="F46-4L-NnG"/>
+                            <constraint firstItem="q0b-vf-FNz" firstAttribute="leading" secondItem="vS6-44-iTf" secondAttribute="leading" id="Mqg-Vt-bDt"/>
                             <constraint firstItem="6PC-Xc-fJH" firstAttribute="bottom" secondItem="vS6-44-iTf" secondAttribute="bottom" id="NA9-ui-aMR"/>
                             <constraint firstItem="6PC-Xc-fJH" firstAttribute="leading" secondItem="vS6-44-iTf" secondAttribute="leading" id="RLn-PN-oSk"/>
-                            <constraint firstItem="6PC-Xc-fJH" firstAttribute="top" secondItem="vS6-44-iTf" secondAttribute="top" id="aVX-gy-5CI"/>
-                            <constraint firstItem="93E-0a-jfg" firstAttribute="top" secondItem="vS6-44-iTf" secondAttribute="top" id="lon-To-QB8"/>
+                            <constraint firstItem="6PC-Xc-fJH" firstAttribute="top" secondItem="vS6-44-iTf" secondAttribute="top" constant="56" id="aVX-gy-5CI"/>
+                            <constraint firstItem="q0b-vf-FNz" firstAttribute="trailing" secondItem="vS6-44-iTf" secondAttribute="trailing" id="emw-4A-OF8"/>
+                            <constraint firstItem="93E-0a-jfg" firstAttribute="top" secondItem="vS6-44-iTf" secondAttribute="top" constant="56" id="lon-To-QB8"/>
                             <constraint firstItem="6PC-Xc-fJH" firstAttribute="trailing" secondItem="vS6-44-iTf" secondAttribute="trailing" id="tE4-aa-8sa"/>
                             <constraint firstItem="93E-0a-jfg" firstAttribute="leading" secondItem="vS6-44-iTf" secondAttribute="leading" id="vsQ-N2-s4M"/>
                         </constraints>
@@ -242,11 +255,12 @@
                     <connections>
                         <outlet property="masterCollectionView" destination="6PC-Xc-fJH" id="Jab-jV-Bcy"/>
                         <outlet property="masterTableView" destination="93E-0a-jfg" id="Zom-n1-naO"/>
+                        <outlet property="searchBar" destination="q0b-vf-FNz" id="BG4-jK-73x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCY-mK-wTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="-630"/>
+            <point key="canvasLocation" x="797.60000000000002" y="-630.13493253373315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
