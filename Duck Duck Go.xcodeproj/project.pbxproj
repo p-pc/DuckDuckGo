@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BCC434A38D644C91CC1720F /* Pods_Duck_Duck_GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A087B936556C1EB0C04B09 /* Pods_Duck_Duck_GoUITests.framework */; };
+		D6DD0F41757EB27E658730C4 /* Pods_Duck_Duck_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DFDAE0275DD416D1F2BF89 /* Pods_Duck_Duck_Go.framework */; };
+		DD8D9F3DFE517A8E9939E21C /* Pods_Duck_Duck_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A62376E0DD29FB783E137D /* Pods_Duck_Duck_GoTests.framework */; };
 		EFD449EE20470EEF006C1E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449ED20470EEF006C1E30 /* AppDelegate.swift */; };
 		EFD449F020470EEF006C1E30 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449EF20470EEF006C1E30 /* MasterViewController.swift */; };
 		EFD449F220470EEF006C1E30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD449F120470EEF006C1E30 /* DetailViewController.swift */; };
@@ -35,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47DCAAD3DFDFFA90C2A4B2DA /* Pods-Duck Duck Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck Go/Pods-Duck Duck Go.debug.xcconfig"; sourceTree = "<group>"; };
+		A2DFDAE0275DD416D1F2BF89 /* Pods_Duck_Duck_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Duck_Duck_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B256FF0932289F3B6BF907BE /* Pods-Duck Duck Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck Go/Pods-Duck Duck Go.release.xcconfig"; sourceTree = "<group>"; };
+		B9A62376E0DD29FB783E137D /* Pods_Duck_Duck_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Duck_Duck_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4FE9DE2C134946AF0BA7CD /* Pods-Duck Duck GoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck GoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck GoUITests/Pods-Duck Duck GoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3720D2B96E55D5605390D39 /* Pods-Duck Duck GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck GoTests/Pods-Duck Duck GoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB5201380C05F42F3F1062F1 /* Pods-Duck Duck GoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck GoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck GoTests/Pods-Duck Duck GoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D488933105660CE15C139A9B /* Pods-Duck Duck GoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duck Duck GoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Duck Duck GoUITests/Pods-Duck Duck GoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2A087B936556C1EB0C04B09 /* Pods_Duck_Duck_GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Duck_Duck_GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD449EA20470EEF006C1E30 /* Duck Duck Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duck Duck Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD449ED20470EEF006C1E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD449EF20470EEF006C1E30 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DD0F41757EB27E658730C4 /* Pods_Duck_Duck_Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8D9F3DFE517A8E9939E21C /* Pods_Duck_Duck_GoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCC434A38D644C91CC1720F /* Pods_Duck_Duck_GoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B829E89EC72D3FEF04BCFB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47DCAAD3DFDFFA90C2A4B2DA /* Pods-Duck Duck Go.debug.xcconfig */,
+				B256FF0932289F3B6BF907BE /* Pods-Duck Duck Go.release.xcconfig */,
+				C3720D2B96E55D5605390D39 /* Pods-Duck Duck GoTests.debug.xcconfig */,
+				CB5201380C05F42F3F1062F1 /* Pods-Duck Duck GoTests.release.xcconfig */,
+				BC4FE9DE2C134946AF0BA7CD /* Pods-Duck Duck GoUITests.debug.xcconfig */,
+				D488933105660CE15C139A9B /* Pods-Duck Duck GoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3AB21888CDCD1FAEB41C854 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2DFDAE0275DD416D1F2BF89 /* Pods_Duck_Duck_Go.framework */,
+				B9A62376E0DD29FB783E137D /* Pods_Duck_Duck_GoTests.framework */,
+				E2A087B936556C1EB0C04B09 /* Pods_Duck_Duck_GoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EFD449E120470EEF006C1E30 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				EFD44A0320470EEF006C1E30 /* Duck Duck GoTests */,
 				EFD44A0E20470EEF006C1E30 /* Duck Duck GoUITests */,
 				EFD449EB20470EEF006C1E30 /* Products */,
+				4B829E89EC72D3FEF04BCFB9 /* Pods */,
+				B3AB21888CDCD1FAEB41C854 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFD44A1420470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck Go" */;
 			buildPhases = (
+				A2E814F02FA361A6F9AFBA69 /* [CP] Check Pods Manifest.lock */,
 				EFD449E620470EEF006C1E30 /* Sources */,
 				EFD449E720470EEF006C1E30 /* Frameworks */,
 				EFD449E820470EEF006C1E30 /* Resources */,
+				D7B9A75CC3060BD3425707F9 /* [CP] Embed Pods Frameworks */,
+				27C5C09D3B6EA0408600A776 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFD44A1720470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoTests" */;
 			buildPhases = (
+				A6E054F69C9C8F15FEF5523B /* [CP] Check Pods Manifest.lock */,
 				EFD449FC20470EEF006C1E30 /* Sources */,
 				EFD449FD20470EEF006C1E30 /* Frameworks */,
 				EFD449FE20470EEF006C1E30 /* Resources */,
+				77F902140CDB69D1EBC63043 /* [CP] Embed Pods Frameworks */,
+				C17B71E60DC092065A05A761 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFD44A1A20470EEF006C1E30 /* Build configuration list for PBXNativeTarget "Duck Duck GoUITests" */;
 			buildPhases = (
+				CD9C1026086C1B5EA3832F63 /* [CP] Check Pods Manifest.lock */,
 				EFD44A0720470EEF006C1E30 /* Sources */,
 				EFD44A0820470EEF006C1E30 /* Frameworks */,
 				EFD44A0920470EEF006C1E30 /* Resources */,
+				A227BCB3ED9DFEB0188A795B /* [CP] Embed Pods Frameworks */,
+				1A7BEAF6765BBC30076D5FDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A7BEAF6765BBC30076D5FDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck GoUITests/Pods-Duck Duck GoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27C5C09D3B6EA0408600A776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck Go/Pods-Duck Duck Go-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77F902140CDB69D1EBC63043 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck GoTests/Pods-Duck Duck GoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A227BCB3ED9DFEB0188A795B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck GoUITests/Pods-Duck Duck GoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E814F02FA361A6F9AFBA69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Duck Duck Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E054F69C9C8F15FEF5523B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Duck Duck GoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C17B71E60DC092065A05A761 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck GoTests/Pods-Duck Duck GoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD9C1026086C1B5EA3832F63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Duck Duck GoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7B9A75CC3060BD3425707F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Duck Duck Go/Pods-Duck Duck Go-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFD449E620470EEF006C1E30 /* Sources */ = {
@@ -428,6 +624,7 @@
 		};
 		EFD44A1520470EEF006C1E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DCAAD3DFDFFA90C2A4B2DA /* Pods-Duck Duck Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +640,7 @@
 		};
 		EFD44A1620470EEF006C1E30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B256FF0932289F3B6BF907BE /* Pods-Duck Duck Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +656,7 @@
 		};
 		EFD44A1820470EEF006C1E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3720D2B96E55D5605390D39 /* Pods-Duck Duck GoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +674,7 @@
 		};
 		EFD44A1920470EEF006C1E30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5201380C05F42F3F1062F1 /* Pods-Duck Duck GoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +692,7 @@
 		};
 		EFD44A1B20470EEF006C1E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4FE9DE2C134946AF0BA7CD /* Pods-Duck Duck GoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +709,7 @@
 		};
 		EFD44A1C20470EEF006C1E30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D488933105660CE15C139A9B /* Pods-Duck Duck GoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
