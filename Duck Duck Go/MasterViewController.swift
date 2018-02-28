@@ -263,6 +263,39 @@ extension MasterViewController : UICollectionViewDataSource, UICollectionViewDel
         
         cell.imageView.image = UIImage(named:"placeholder")
         
+        let resultItem = results[indexPath.row]
+        
+        if let imageURL = resultItem.iconURL {
+            
+            let plcHldrImg = UIImage(named: "placeholder")
+            
+            if let builtUrl = URL.init(string: imageURL) {
+                
+                let resource = ImageResource(downloadURL: builtUrl, cacheKey: imageURL)
+                cell.imageView.kf.setImage(with: resource, placeholder: plcHldrImg, options: [.targetCache(Utility.sharedInstance.userMediaCache),.cacheMemoryOnly], progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
+                    
+                    if let err = error {
+                        dLog("error in downloading profile image : \(err)")
+                        
+                        DispatchQueue.main.async {
+                            cell.imageView.image = UIImage(named: "placeholder")
+                        }
+                    }
+                    else {
+                        
+                        DispatchQueue.main.async {
+                            cell.imageView.image = image
+                        }
+                        
+                        
+                    }
+                    
+                    
+                })
+            }
+            
+        }
+        
         return cell
     }
     
