@@ -12,14 +12,31 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    var resultItem = SearchResultModel()
 
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+        
+        imageView.image = UIImage(named: "placeholder")
+
+        if let resImage = resultItem.iconURL {
+            //get image here and set in view
         }
+        else {
+            imageView.image = UIImage(named: "placeholder")
+        }
+        
+        if let textVal = resultItem.text {
+            textView.text = textVal
+        }
+        
+        if let titleVal = resultItem.title {
+            self.title = titleVal
+        }
+        
     }
 
     override func viewDidLoad() {

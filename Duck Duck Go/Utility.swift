@@ -14,8 +14,6 @@ class Utility: NSObject {
         
         var resultArr = [SearchResultModel]()
         
-        dLog("jsonDict RelatedTopics : \(jsonDict["RelatedTopics"])")
-        
         guard let resArrDict = jsonDict["RelatedTopics"] as? [Any] else {return resultArr}
         
         for aDict in resArrDict {
