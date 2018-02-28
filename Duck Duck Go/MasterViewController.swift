@@ -52,11 +52,23 @@ class MasterViewController: UIViewController {
         
         
         reloadViewWithSearchResult()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(MasterViewController.appCameToForeground),
+            name: NSNotification.Name.UIApplicationWillEnterForeground,
+            object: nil)
 
     }
 
+    @objc func appCameToForeground(){
+        
+        reloadViewWithSearchResult()
+
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-//        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+
         super.viewWillAppear(animated)
         
         reloadViewWithSearchResult()
