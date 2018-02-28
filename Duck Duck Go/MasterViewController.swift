@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UIViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
@@ -22,16 +22,27 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
 //        navigationItem.leftBarButtonItem = editButtonItem
 
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-//        navigationItem.rightBarButtonItem = addButton
+//        let addButton = UIBarButtonItem(barButtonSystemItem: ., target: self, action: #selector(switchView(_:)))
+        
+        if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.pad {
+            let switchButton = UIBarButtonItem(image: UIImage(named: "gridswitch"), style: .plain, target: self, action: #selector(switchView(_:)))
+            navigationItem.rightBarButtonItem = switchButton
+        }
+        
+        self.title = "Seinfeld"
+        
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController?.title = ""
         }
+        
+        reloadViewWithSearchResult()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+//        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
         
         reloadViewWithSearchResult()
@@ -125,17 +136,17 @@ class MasterViewController: UITableViewController {
     }
 
     @objc
-    func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
+    func switchView(_ sender: Any) {
+        
     }
+    
+    
 
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
+            if let indexPath = self.masterTableView.indexPathForSelectedRow {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 
                 let result = results[indexPath.row]
@@ -151,19 +162,22 @@ class MasterViewController: UITableViewController {
             }
         }
     }
-
+}
     // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+
+extension MasterViewController : UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
 
 //        let object = objects[indexPath.row] as! NSDate
         
@@ -176,12 +190,12 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             objects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
