@@ -22,14 +22,68 @@ class Duck_Duck_GoTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //comment - enable to test
+//        self.testServiceCall()
+
+        self.testPerformanceExample()
+
+    }
+    
+    func testServiceCall() {
+        
+        ServiceManager.sharedInstance.getResultsFor(searchText: "seinfeld+characters", completion: { error, response in
+            
+            if let err = error {
+                XCTAssert(false, err.localizedDescription)
+            }
+            else {
+                
+                guard let respData = response else {
+                    
+                    XCTAssert(false, "getResultsFor seinfeld+characters failed - response nil")
+                    
+                    return
+                }
+                
+                if respData.count > 0 {
+                    XCTAssert(true, "getResultsFor seinfeld+characters exists - success")
+                }
+                else {
+                    XCTAssert(false, "getResultsFor seinfeld+characters des not exist - fail")
+                }
+            }
+        })
+
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            
+            ServiceManager.sharedInstance.getResultsFor(searchText: "seinfeld+characters", completion: { error, response in
+                
+                if let err = error {
+                    XCTAssert(false, err.localizedDescription)
+                }
+                else {
+                    
+                    guard let respData = response else {
+                        
+                        XCTAssert(false, "getResultsFor seinfeld+characters failed - response nil")
+                        
+                        return
+                    }
+                    
+                    if respData.count > 0 {
+                        XCTAssert(true, "getResultsFor seinfeld+characters exists - success")
+                    }
+                    else {
+                        XCTAssert(false, "getResultsFor seinfeld+characters des not exist - fail")
+                    }
+                }
+            })
+
         }
     }
     
