@@ -38,3 +38,4 @@ Escaping closures in Service Managers will ensure app performance is not lagging
 Guards are used effectively to handle any king of unexpected data of format behavior.
 Simple test cases added for UI testing and Performance testing. No custom identifiers used.
 UIApplicationWillEnterForeground notification observed to refresh UI when app comes to foreground in every session.
+
